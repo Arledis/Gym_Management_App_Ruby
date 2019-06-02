@@ -36,6 +36,7 @@ employee4 = Employee.new({
 
 employee4.save()
 
+
 client1 = Client.new({
 "name" => "Arledis Amaya",
 "membership_type" => "Standard",

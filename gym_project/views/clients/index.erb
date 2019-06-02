@@ -1,0 +1,20 @@
+<h1>Clients</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Contact Details</th>
+    <th></th>
+    <th>Membership</th>
+  </tr>
+  <% for client in @clients %>
+  <tr>
+    <td><a href="/client/<%= client.id %>"><%= client.name %></a></td>
+    <td>|</td>
+    <td><%= client.contact_details %></td>
+    <td>|</td>
+    <td><%= client.membership_type %></td>
+  </tr>
+  <% end %>
+</table>
