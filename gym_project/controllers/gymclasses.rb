@@ -1,0 +1,7 @@
+require( 'sinatra' )
+require( 'sinatra/contrib/all' )
+require( 'pry-byebug' )
+require_relative( '../models/gymclass.rb' )
+require_relative( '../models/client.rb' )
+require_relative( '../models/employee.rb' )
+also_reload( '../models/*' )

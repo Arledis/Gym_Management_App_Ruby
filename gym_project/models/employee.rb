@@ -1,8 +1,9 @@
 require_relative('../db/sql_runner')
 
 class Employee
-  attr_reader (:name, :speciality, :id)
-  def initialize(options)
+  attr_reader :name, :speciality, :id
+
+  def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @speciality = options['speciality']
@@ -52,7 +53,7 @@ class Employee
   end
 
   def self.delete_all
-    sql = "DELETE * FROM employees"
+    sql = "DELETE FROM employees"
     SqlRunner.run( sql )
 
   end

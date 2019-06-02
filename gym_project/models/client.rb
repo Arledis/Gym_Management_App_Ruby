@@ -1,7 +1,8 @@
-require_relative( '../db/sql_runner' )
+require_relative( '../db/sql_runner.rb' )
 
 class Client
-  attr_accesor ( :name, :membership_type, :contact_details, :id)
+  attr_accessor :name, :membership_type, :contact_details, :id
+
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
@@ -67,7 +68,7 @@ class Client
   end
 
   def self.delete_all
-    sql = "DELETE * FROM clients"
+    sql = "DELETE FROM clients"
     SqlRunner.run( sql )
   end
 
