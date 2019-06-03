@@ -1,12 +1,12 @@
+DROP TABLE bookings;
 DROP TABLE gymclasses;
-DROP TABLE employees;
 DROP TABLE clients;
 
-CREATE TABLE employees
+CREATE TABLE gymclasses
 (
   id SERIAL8 primary key,
   name VARCHAR(255),
-  speciality VARCHAR(255)
+  capacity INT2
 );
 
 CREATE TABLE clients
@@ -17,11 +17,9 @@ CREATE TABLE clients
   contact_details VARCHAR(255)
 );
 
-CREATE TABLE gymclasses
+CREATE TABLE bookings
 (
   id SERIAL8 primary key,
-  name VARCHAR(255),
-  employee_id INT8 references employees(id),
-  client_id INT8 references clients(id),
-  capacity INT2
+  gymclass_id INT8 references gymclasses(id),
+  client_id INT8 references clients(id)
 );

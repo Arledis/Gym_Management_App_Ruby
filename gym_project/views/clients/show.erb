@@ -1,0 +1,14 @@
+<h2>Clients</h2>
+
+<div id="client-wrapper">
+  <% @clients.each do |client| %>
+
+  <div class="client">
+    <h3><a href="/clients/<%= client.id %>"><%= client.format_name %></a></h3>
+    <p>Membership Status: <%= client.membership_type %></p>
+    <p>Contac Details: <%= client.contact_details %></p>
+    <p>Bookings: <%= client.gymclass.name.capitalize %></p>
+  </div>
+
+  <% end %>
+</div>

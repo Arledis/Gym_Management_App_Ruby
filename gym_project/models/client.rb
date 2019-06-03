@@ -42,15 +42,15 @@ class Client
   end
 
 
-  def employees()
-    sql = "SELECT employees.*
-    FROM employees
-    INNER JOIN gymclasses
-    ON gymclasses.employee_id = employees.id
-    WHERE gymclasses.employee_id = $1;"
+  def gymclasses()
+    sql = "SELECT gymclasses.*
+    FROM gymclasses
+    INNER JOIN bookings
+    ON bookings.gymclass_id = gymclasses.id
+    WHERE bookings.client_id = $1;"
     values = [@id]
     results = SqlRunner.run(sql,values)
-    return results.map { |employee| Employee.new(employee)  }
+    return results.map { |gymclass| Gymclass.new(gymclass)  }
   end
 
   def self.all()

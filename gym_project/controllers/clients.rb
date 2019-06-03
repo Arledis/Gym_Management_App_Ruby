@@ -14,8 +14,3 @@ get '/clients/:id' do
   @client = Client.find(params['id'].to_i)
   erb( :"clients/show")
 end
-
-get '/victims/:id' do
-  @victim = Victim.find(params['id'].to_i)
-  erb( :"victims/show" )
-end
