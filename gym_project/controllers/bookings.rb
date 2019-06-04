@@ -12,6 +12,10 @@ get '/bookings' do
   erb ( :"bookings/index" )
 end
 
+get '/booking_not_available' do
+  erb( :"bookings/not_available")
+end
+
 get '/bookings/new' do
   @clients = Client.all
   @gymclasses = Gymclass.all
@@ -19,7 +23,13 @@ get '/bookings/new' do
 end
 
 post '/bookings' do
+
   booking = Booking.new(params)
+  clients = Booking.clients_in_class(params["gymclass_id"])
+  gymclass = Gymclass.find(params["gymclass_id"])
+  if clients >= gymclass.capacity
+    redirect to("/booking_not_available")
+  end
   booking.save
   redirect to("/bookings")
 end

@@ -37,7 +37,7 @@ class Gymclass
     return results.map { |client| Client.new(client)  }
   end
 
-  def is_space_available?
+  def is_space_available
     if @capacity <= clients().size
       return true
     else
@@ -64,6 +64,13 @@ class Gymclass
     sql = "DELETE FROM gymclasses"
     SqlRunner.run( sql )
 
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM gymclasses
+    WHERE id = $1"
+    values = [id]
+    SqlRunner.run( sql, values )
   end
 
 end

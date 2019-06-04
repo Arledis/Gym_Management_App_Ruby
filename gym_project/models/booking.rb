@@ -39,6 +39,13 @@ class Booking
     return Client.new( results.first )
   end
 
+  def self.clients_in_class(class_id)
+    sql = "SELECT * from bookings WHERE gymclass_id = $1"
+    values = [class_id]
+    results = SqlRunner.run( sql, values )
+    return results.count
+  end
+
   def gymclass()
     sql = "SELECT * FROM gymclasses
     WHERE id = $1"

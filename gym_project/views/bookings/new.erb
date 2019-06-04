@@ -5,8 +5,10 @@
   Select a class:
     <select name="gymclass_id">
       <% for gymclass in @gymclasses %>
+
       <option value="<%= gymclass.id %>"><%= gymclass.name %></option>
       <% end %>
+
     </select>
   </label>
 

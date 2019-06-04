@@ -23,3 +23,8 @@ get '/gymclasses/:id' do
   @gymclass = Gymclass.find(params['id'].to_i)
   erb( :"gymclasses/show")
 end
+
+post '/gymclasses/:id/delete' do
+  Gymclass.delete(params[:id])
+  redirect to "/gymclasses"
+end

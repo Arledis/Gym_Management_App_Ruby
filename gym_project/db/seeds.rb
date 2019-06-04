@@ -100,6 +100,11 @@ booking4 = Booking.new({
   "client_id" => client2.id
 })
 
+booking4 = Booking.new({
+  "gymclass_id" => gymclass1.id,
+  "client_id" => client2.id
+})
+
 booking4.save()
 
 
