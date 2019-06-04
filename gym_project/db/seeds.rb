@@ -37,7 +37,7 @@ client3.save()
 client4 = Client.new({
 "name" => "Alina Spencer",
 "membership_type" => "Premium",
-"contact_details" => "dmackintosh@yahoo.com, 6 Rutherglen road, telef: 07758026522"
+"contact_details" => "alinaspencer@yahoo.com, 20 Rutherglen road, telef: 07758226522"
 })
 
 client4.save()

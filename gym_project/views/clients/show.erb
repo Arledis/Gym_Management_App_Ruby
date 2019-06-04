@@ -1,14 +1,13 @@
-<h2>Clients</h2>
+<h1>Clients details</h1>
 
-<div id="client-wrapper">
-  <% @clients.each do |client| %>
+<h3><%= @client.name %></h3>
 
-  <div class="client">
-    <h3><a href="/clients/<%= client.id %>"><%= client.format_name %></a></h3>
-    <p>Membership Status: <%= client.membership_type %></p>
-    <p>Contac Details: <%= client.contact_details %></p>
-    <p>Bookings: <%= client.gymclass.name.capitalize %></p>
-  </div>
+<p>Contact Details: <%= @client.contact_details %></p>
 
+<h3>Bookings:</h3>
+
+<ul>
+  <% @client.gymclasses.each do |gymclass| %>
+  <li><%= gymclass.name %></li>
   <% end %>
-</div>
+</ul>

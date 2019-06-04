@@ -1,0 +1,31 @@
+<h2>Edit Client's Contact Details</h2>
+<h3><%= @client.name %></h3>
+<form method="POST" action="/clients/<%= @client.id %>/edit">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" id="name" value=<%= @client.name %>/>
+    </div>
+
+    <div class="form-el">
+      <label for="contact_details">Contact Details:</label>
+      <input type="text" name="contact_details" id="contact_details" value=<%= @client.contact_details%>/>
+    </div>
+
+
+
+    <div class="form-el">
+      <label for="membership_type">Membership:</label>
+      <select name="membership_type" id="membership_type">
+        <option value="Premium">Premium</option>
+        <option value="Standard">Standard</option>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <input type="submit" value="Update details"/>
+    </div>
+
+  </div>
+</form>

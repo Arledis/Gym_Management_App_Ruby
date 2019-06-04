@@ -1,20 +1,26 @@
 <h1>Clients</h1>
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/clients/new">Add a client</a>
+</p>
 
 <table>
   <tr>
     <th>Name</th>
     <th></th>
-    <th>Contact Details</th>
     <th></th>
     <th>Membership</th>
   </tr>
   <% for client in @clients %>
   <tr>
     <td><a href="/clients/<%= client.id %>"><%= client.name %></a></td>
-    <td>|</td>
-    <td><%= client.contact_details %></td>
-    <td>|</td>
+    <td></td>
+    <td></td>
     <td><%= client.membership_type %></td>
+    <td></td>
+    <td></td>
+    <td><form action="/clients/<%= client.id %>/edit" method="GET">
+        <input class="btn btn--danger" type="submit" value="Update" />
+      </form></td>
   </tr>
   <% end %>
 </table>

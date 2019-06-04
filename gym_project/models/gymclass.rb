@@ -37,6 +37,13 @@ class Gymclass
     return results.map { |client| Client.new(client)  }
   end
 
+  def is_space_available?
+    if @capacity <= clients().size
+      return true
+    else
+      return false
+    end
+    end
 
   def self.all()
     sql = "SELECT * FROM gymclasses"

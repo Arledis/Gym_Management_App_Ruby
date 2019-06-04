@@ -1,0 +1,13 @@
+<h1>Class bookings</h1>
+
+<h3><%= @gymclass.name %></h3>
+
+<p>Contact Details: <%= @gymclass.capacity %></p>
+
+<h3>Clients:</h3>
+
+<ul>
+  <% @gymclass.clients.each do |client| %>
+  <li><%= client.name %></li>
+  <% end %>
+</ul>

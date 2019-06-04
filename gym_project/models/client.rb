@@ -37,7 +37,7 @@ class Client
       $1, $2, $3
     )
     WHERE id = $4"
-    values = [@name, @membership_type, @contact_details]
+    values = [@name, @membership_type, @contact_details, @id]
     SqlRunner.run( sql, values )
   end
 
@@ -60,7 +60,7 @@ class Client
   end
 
 
-  def find(id)
+  def self.find(id)
     sql = "SELECT * FROM clients WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )

@@ -1,0 +1,26 @@
+<h1>Classes</h1>
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/gymclasses/new">Add a Class</a>
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th>Capacity</th>
+  </tr>
+  <% for gymclass in @gymclasses %>
+  <tr>
+    <td><a href="/gymclasses/<%= gymclass.id %>"><%= gymclass.name %></a></td>
+    <td></td>
+    <td></td>
+    <td><%= gymclass.capacity %></td>
+    <td></td>
+    <td></td>
+    <td><form action="/gymclasses/<%= gymclass.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="Delete" />
+      </form></td>
+  </tr>
+  <% end %>
+</table>

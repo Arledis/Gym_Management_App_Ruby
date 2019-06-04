@@ -1,0 +1,18 @@
+<h1>Bookings</h1>
+
+<p class="btn--wrapper">
+  <a class="btn btn--action" href="/bookings/new">Book a class</a>
+</p>
+
+<ul>
+  <% for booking in @bookings %>
+  <li>
+  <p><%= booking.gymclass.name %> <%= booking.client.name %> </p>
+    <p>
+      <form action="/bookings/<%= booking.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>
