@@ -1,17 +1,14 @@
 <h1>Book a class</h1>
-
+<div class="new_booking">
 <form action="/bookings" method="post">
   <label>
   Select a class:
     <select name="gymclass_id">
       <% for gymclass in @gymclasses %>
-
       <option value="<%= gymclass.id %>"><%= gymclass.name %></option>
       <% end %>
-
     </select>
   </label>
-
   <label>
     Select a client:
     <select name="client_id">
@@ -20,6 +17,6 @@
       <% end %>
     </select>
   </label>
-
-  <input class="btn btn--action" type='submit' value="Book class">
+  <input class="btn btn--action" type='submit' value="Book">
 </form>
+</div>

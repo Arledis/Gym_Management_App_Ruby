@@ -8,9 +8,77 @@ td {
 
 th {
   padding: 0px 20px 10px 0px;
-  border-bottom: 1px solid papayawhip;
+  border-bottom: 1px solid blue;
 }
 
 table {
   border-collapse: collapse;
+}
+
+#bookings {
+   font-family: "Trebuchet MS", Arial, Helvetica;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+#bookings td, #bookings th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#bookings tr:nth-child(even){background-color: #f2f2f2;}
+
+#bookings tr:hover {background-color: #ddd;}
+
+#bookings th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+#clients {
+   font-family: "Trebuchet MS", Arial, Helvetica;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+#clients td, #clients th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#clients tr:nth-child(even){background-color: #f2f2f2;}
+
+#clients tr:hover {background-color: #ddd;}
+
+#clients th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+
+#gymclass {
+   font-family: "Trebuchet MS", Arial, Helvetica;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+#gymclass td, #gymclass th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#gymclass tr:nth-child(even){background-color: #f2f2f2;}
+
+#gymclass tr:hover {background-color: #ddd;}
+
+#gymclass th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
 }

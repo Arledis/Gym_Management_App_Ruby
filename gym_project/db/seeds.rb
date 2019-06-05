@@ -46,14 +46,16 @@ client4.save()
 
 gymclass1 = Gymclass.new({
   "name" => "Fat Burn",
-  "capacity" => 10
+  "capacity" => 10,
+  "schedule" => "04 Jun 19 2:00 PM"
   })
 
 gymclass1.save()
 
 gymclass2 = Gymclass.new({
   "name" => "Fit Spin",
-  "capacity" => 5
+  "capacity" => 5,
+  "schedule" => "04 Jun 19 3:00 PM"
   })
 
 gymclass2.save()
@@ -61,7 +63,8 @@ gymclass2.save()
 
 gymclass3 = Gymclass.new({
   "name" => "Tabata Fit",
-  "capacity" => 5
+  "capacity" => 5,
+  "schedule" => "04 Jun 19 4:00 PM"
   })
 
 gymclass3.save()
@@ -69,7 +72,8 @@ gymclass3.save()
 
 gymclass4 = Gymclass.new({
   "name" => "Body Conditioning",
-  "capacity" => 5
+  "capacity" => 5,
+  "schedule" => "04 Jun 19 5:00 PM"
   })
 
 gymclass4.save()

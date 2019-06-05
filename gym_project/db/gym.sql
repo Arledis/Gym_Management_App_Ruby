@@ -6,7 +6,8 @@ CREATE TABLE gymclasses
 (
   id SERIAL8 primary key,
   name VARCHAR(255),
-  capacity INT2
+  capacity INT2,
+  schedule VARCHAR(255)
 );
 
 CREATE TABLE clients

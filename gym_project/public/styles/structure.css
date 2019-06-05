@@ -1,0 +1,94 @@
+html, body {
+  margin: 5px;
+  padding: 10px;
+  background-color: white;
+  border: 15px lightgrey;
+}
+
+body {
+
+  font-weight: 80;
+}
+
+
+.header img {
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+
+.header h1 {
+  position: middle;
+  top: 180px;
+  left: 10px;
+  color: white;
+}
+.header {
+  background: url('/images/img2.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  text-align: center;
+}
+
+
+.header .container {
+  position: relative;
+  top: 120px;
+}
+
+.header h1 {
+  color: #fff;
+  line-height: 100px;
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+@media (min-width:850px) {
+  .header h1 {
+    font-size: 80px;
+  }
+}
+
+a, a:link, a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  height: 60px;
+  width: 100%;
+}
+
+
+.topnav ul {
+  height: 50px;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.topnav ul li {
+  float:left;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  height: 60px;
+  line-height: 60px;
+  list-style: none;
+  padding: 0px 77px;
+  transition: background .5s;
+}
+
+.topnav ul li:hover {
+  background-color: #ddd;
+  text-decoration: none;
+  color: black;
+}

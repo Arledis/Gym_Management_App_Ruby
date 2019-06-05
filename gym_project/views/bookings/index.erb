@@ -1,26 +1,22 @@
 <h1>Bookings</h1>
 
-<p class="btn--wrapper">
-  <a class="btn btn--action" href="/bookings/new">Book a class</a>
-</p>
 
-  <table>
+
+  <table id="bookings">
     <tr>
       <th>Client:</th>
-      <th></th>
       <th>Class:</th>
-      <th></th>
+      <th>Date & Time:</th>
       <th>Booking ID:</th>
     </tr>
         <% for booking in @bookings %>
     <tr>
-      <td><a href="/bookings/<%= booking.client.name %>"><%= booking.client.name %></a></td>
-      <td></td>
+      <td><%= booking.client.name %></td>
       <td><%=booking.gymclass.name %></td>
+      <td><%=booking.gymclass.schedule %></td>
       <td><%=booking.id %></td>
-      <td></td>
       <td><form action="/bookings/<%= booking.id %>/delete" method="POST">
-        <input class="btn btn--danger" type="submit" value="delete" />
+        <input class="btn btn--delete" type="submit" value="Delete" />
       </form></td>
     </tr>
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<div class="header">
+      <div class="container">
+        <img src="/images/logo1.png" alt="logo" />
+        <h1>CrossFit Management</h1>
+      </div>
+    </div>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet'>
+  <link rel="icon" href="/images/logo1.png" />
+
+  <link rel="stylesheet" type="text/css" href="/styles/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/styles/forms.css">
+  <link rel="stylesheet" type="text/css" href="/styles/structure.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tables.css">
+
+  <meta charset="UTF-8">
+  <meta name="Bookings at gym" content="Gym Management">
+  <meta name="keywords" content="HTML,CSS,SQL, bookings, Classes">
+  <meta name="author" content="Arledis Forbes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <main>
+    <div class="topnav">
+     <div class="container">
+       <ul>
+         <li><a href="/clients">Clients</a></li>
+         <li><a href="/clients/new">Register a Client</a></li>
+         <li><a href="/gymclasses">Classes</a></li>
+         <li><a href="/gymclasses/new">Add a Class</a></li>
+         <li><a href="/bookings">Bookings</a></li>
+         <li><a href="/bookings/new">Book a Class</a></li>
+       </ul>
+     </div>
+   </div>
+  </main>
+    <section id="content">
+  <%= yield %>
+  </section>
+  <div class="footer">
+     <div class="container">
+       <p></p>
+     </div>
+   </div>
+</body>
+</html>

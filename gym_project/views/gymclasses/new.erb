@@ -1,20 +1,27 @@
 <h2>New class</h2>
-<form action="/gymclasses" method="POST">
-  <div class="form-wrapper">
+<div class="new_class">
+  <form action="/gymclasses" method="POST">
+    <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="name">Class name:</label>
-      <input type="text" name="name" id="name"/>
+      <div class="form-el">
+        <label for="name">Class name:</label>
+        <input type="text" name="name" id="name" placeholder="Your Class..." />
+      </div>
+
+      <div class="form-el">
+        <label for="capacity">Capacity:</label>
+        <input type="text" name="capacity" id="capacity-field" placeholder="Add capacity..."></>
+      </div>
+
+      <div class="form-el">
+        <label for="schedule">Time:</label>
+        <input type="text" name="schedule" id="schedule-field" placeholder="Add Date & Time..."></>
+      </div>
+
+      <div class="form-el">
+        <input type="submit" value="Add class"/>
+      </div>
+
     </div>
-
-    <div class="form-el">
-      <label for="capacity">Capacity:</label>
-      <input type="number" name="capacity" id="capacity-field"></>
-    </div>
-
-    <div class="form-el">
-      <input type="submit" value="Add class"/>
-    </div>
-
-  </div>
-</form>
+  </form>
+</div>

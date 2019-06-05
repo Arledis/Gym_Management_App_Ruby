@@ -1,0 +1,62 @@
+input[type=text], select {
+  width: 100%;
+  padding: 15px 10px;
+  margin: 15px 0px;
+  display: inline-block;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width:50%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 0 23%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+#form-wrapper {
+  border-radius: 5px;
+  background-color: #8fa1b2;
+  padding: 20px;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.new_client {
+  width: 600px;
+  border: 2px;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #8fa1b2;
+  padding: 20px;
+}
+
+.new_class {
+  width: 600px;
+  border: 2px;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #8fa1b2;
+  padding: 20px;
+}
+
+.new_booking {
+  width: 600px;
+  border: 2px;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #8fa1b2;
+  padding: 20px;
+}
