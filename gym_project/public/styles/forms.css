@@ -15,7 +15,7 @@ input[type=submit] {
   padding: 14px 20px;
   margin: 0 23%;
   border: none;
-  border-radius: 4px;
+  border-radius:54px;
   cursor: pointer;
 }
 
@@ -53,6 +53,15 @@ input[type=submit]:hover {
 }
 
 .new_booking {
+  width: 600px;
+  border: 2px;
+  border-radius: 5px;
+  margin: auto;
+  background-color: #8fa1b2;
+  padding: 20px;
+}
+
+.update {
   width: 600px;
   border: 2px;
   border-radius: 5px;

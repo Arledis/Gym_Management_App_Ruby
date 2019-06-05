@@ -2,6 +2,7 @@ html, body {
   margin: 5px;
   padding: 10px;
   background-color: white;
+  text-align: left;
   border: 15px lightgrey;
 }
 
@@ -10,7 +11,10 @@ body {
   font-weight: 80;
 }
 
-
+h2 {
+  font-size: 20px;
+  text-align: justify;
+}
 .header img {
   float: left;
   width: 150px;
@@ -51,7 +55,7 @@ body {
 }
 
 a, a:link, a:visited {
-  color: grey;
+  color: darkgrey;
   text-decoration: none;
 }
 
@@ -75,7 +79,7 @@ a, a:link, a:visited {
 
 
 .topnav ul li {
-  float:left;
+  float: left;
   color: white;
   display: inline-block;
   text-align: center;
@@ -91,4 +95,24 @@ a, a:link, a:visited {
   background-color: #ddd;
   text-decoration: none;
   color: black;
+}
+
+.footer {
+  background: url('/images/img.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100px;
+  text-align: center;
+}
+
+
+.footer p {
+  color: #fff;
+  font-size: 14px;
+  height: 50px;
+  line-height: 80px;
+  margin: 80px;
+}
+
+.heading {
+  text-align: center;
 }
