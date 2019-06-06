@@ -1,7 +1,10 @@
+<div class="title">
   <h1>Clients</h1>
+</div>
+
 <table id="clients">
   <tr>
-    <th>Name</th>
+    <th>Client's name</th>
     <th>Membership</th>
   </tr>
   <% for client in @clients %>
@@ -10,6 +13,9 @@
     <td><%= client.membership_type %></td>
     <td><form action="/clients/<%= client.id %>/edit" method="GET">
         <input class="btn btn--danger" type="submit" value="Update" />
+      </form></td>
+    <td><form action="/clients/<%= client.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="Delete" />
       </form></td>
   </tr>
   <% end %>

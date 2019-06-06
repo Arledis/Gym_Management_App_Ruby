@@ -35,3 +35,8 @@ post '/clients/:id/edit' do
   client.update
   redirect to "/clients"
 end
+
+post '/clients/:id/delete' do
+  Client.delete(params[:id])
+  redirect to "/clients"
+end
